@@ -40,7 +40,7 @@ async function FetchAllCurrencies() {
 
   let data;
   try {
-    data = await fetch("https://localhost:7203/api/Currencies/GetCurrencies");
+    data = await fetch("https://bsp.runasp.net/api/Currencies/GetCurrencies");
   } catch (error) {
     return;
   } finally {
@@ -130,7 +130,7 @@ function ShowCurrency(CurrencyId) {
 
 async function LoadCurrencyInfo(CurrencyId) {
   let data = await fetch(
-    `https://localhost:7203/api/Currencies/GetCurrencyById/${CurrencyId}`
+    `https://bsp.runasp.net/api/Currencies/GetCurrencyById/${CurrencyId}`
   );
 
   Currency = await data.json();
