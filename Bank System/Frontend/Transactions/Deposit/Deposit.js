@@ -18,7 +18,7 @@ async function FetchAllClients() {
   ResponsiveTable.classList.add("loading");
 
   try {
-    data = await fetch("https://localhost:7203/api/Clients/GetClients");
+    data = await fetch("https://bsp.runasp.net/api/Clients/GetClients");
   } catch (error) {
     return;
   } finally {
@@ -125,7 +125,7 @@ DepositBtn.addEventListener("click", async (_) => {
 
 async function Deposit(clientId, amount) {
   let data = await fetch(
-    `https://localhost:7203/api/Clients/Deposit/${clientId}`,
+    `https://bsp.runasp.net/api/Clients/Deposit/${clientId}`,
     {
       method: "post",
       headers: {
