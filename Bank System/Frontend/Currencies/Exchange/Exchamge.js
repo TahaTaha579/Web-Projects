@@ -23,7 +23,7 @@ async function FetchAllCurrencies() {
   let data;
 
   try {
-    data = await fetch("https://localhost:7203/api/Currencies/GetCurrencies");
+    data = await fetch("https://bsp.runasp.net/api/Currencies/GetCurrencies");
   } catch (error) {
     return;
   }
