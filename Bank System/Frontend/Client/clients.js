@@ -74,7 +74,7 @@ async function FetchAllClients() {
   AddClientBtn.setAttribute("disabled", "");
 
   try {
-    data = await fetch("https://localhost:7203/api/Clients/GetClients");
+    data = await fetch("https://bsp.runasp.net/api/Clients/GetClients");
   } catch (error) {
     return;
   } finally {
@@ -213,7 +213,7 @@ function ClickUpdateBtn(clientId) {
 
 async function LoadClientInfo(clientId, UpdateMode = true) {
   let data = await fetch(
-    `https://localhost:7203/api/Clients/GetClientById/${clientId}`
+    `https://bsp.runasp.net/api/Clients/GetClientById/${clientId}`
   );
 
   client = await data.json();
@@ -321,7 +321,7 @@ async function SaveClientInfo() {
   let data;
 
   if (RoleSaveBtn == "add") {
-    data = await fetch("https://localhost:7203/api/Clients/AddClient", {
+    data = await fetch("https://bsp.runasp.net/api/Clients/AddClient", {
       method: "post",
       headers: {
         Accept: "application/json",
@@ -330,7 +330,7 @@ async function SaveClientInfo() {
       body: JSON.stringify(client),
     });
   } else {
-    data = await fetch("https://localhost:7203/api/Clients/UpdateClient", {
+    data = await fetch("https://bsp.runasp.net/api/Clients/UpdateClient", {
       method: "put",
       headers: {
         Accept: "application/json",
@@ -352,18 +352,18 @@ AddClientBtn.addEventListener("click", (e) => {
   CardTitle.textContent = "Add Client";
 });
 
-function ClickDeleteBtn(clientId) {
+async function ClickDeleteBtn(clientId) {
   CheckShow = false;
   let ClickYes = confirm(`Are you Shure Delete Client Id ${clientId} ?!`);
 
   if (ClickYes) {
-    DeleteClient(clientId);
+    await DeleteClient(clientId);
     location.reload();
   }
 }
 
 async function DeleteClient(clientId) {
-  await fetch(`https://localhost:7203/api/Clients/DeleteClient/${clientId}`, {
+  await fetch(`https://bsp.runasp.net/api/Clients/DeleteClient/${clientId}`, {
     method: "delete",
   });
 
