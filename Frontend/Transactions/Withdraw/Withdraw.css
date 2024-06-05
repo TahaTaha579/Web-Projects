@@ -1,0 +1,157 @@
+.withdraw-page .search::before {
+  position: absolute;
+  content: "\f002";
+  font-family: var(--fa-style-family-classic);
+  /*"Font Awesome 6 Free"*/
+  font-weight: 900;
+  left: 11px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: var(--grey-color);
+}
+
+.withdraw-page .search input {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding-left: 31px;
+  width: 257px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.withdraw-page .search input:focus {
+  width: 301px;
+  border-color: #ddd;
+}
+
+.withdraw-page .search input::placeholder {
+  font-size: 14px;
+}
+
+.withdraw-page .search input:focus::placeholder {
+  opacity: 0;
+  /* or color : transparent */
+}
+
+.clients-table {
+  max-width: 999px;
+}
+
+.clients-table .responsive-table {
+  overflow-x: auto;
+  max-height: 599px;
+}
+
+.clients-table table {
+  min-width: 501px;
+  border-spacing: 0;
+}
+
+.clients-table table td {
+  padding: 15px;
+  border-bottom: 1px solid #999;
+  border-left: 1px solid #999;
+  transition: 0.3s;
+}
+
+.clients-table table tr td:last-child {
+  border-right: 1px solid #ccc;
+}
+
+.clients-table thead td {
+  background-color: #ccc;
+  font-weight: bold;
+}
+
+.clients-table tbody tr:hover td {
+  background-color: #faf7f7;
+  cursor: pointer;
+}
+
+.withdraw-footer {
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  justify-content: center;
+  gap: 31px;
+  max-width: 901px;
+}
+
+.withdraw-footer .client-id {
+  color: var(--blue-color);
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.withdraw-footer input {
+  padding: 9px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+  font-size: 19px;
+  transition: 0.3s;
+}
+
+.withdraw-footer input:focus {
+  background-color: var(--blue-color);
+  color: white;
+}
+
+.withdraw-footer .withdraw-btn {
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 12px 18px;
+  text-align: center;
+  background-color: var(--blue-color);
+  color: white;
+  letter-spacing: 1.1px;
+  transition: 0.39s;
+  font-size: 19px;
+}
+
+.withdraw-footer .withdraw-btn:not([disabled]):hover {
+  background-color: var(--blue-color-alt);
+  cursor: pointer;
+}
+
+.withdraw-page .error {
+  font-size: 20px;
+  text-align: center;
+  text-decoration: underline;
+  opacity: 0;
+  overflow: hidden;
+  transition: 0.19s;
+  max-width: 901px;
+  margin-top: 27px;
+}
+
+.withdraw-page .error.show {
+  opacity: 1;
+}
+
+@media (max-width: 575px) {
+  .deposit-page .search input {
+    width: 199px;
+  }
+
+  .deposit-page .search input:focus {
+    width: 199px;
+  }
+
+  .withdraw-footer {
+    flex-direction: column;
+    font-size: 19px;
+    gap: 19px;
+  }
+
+  .withdraw-footer .withdraw-btn {
+    font-size: 17px;
+  }
+
+  .withdraw-page .error {
+    font-size: 17px;
+  }
+}

@@ -1,0 +1,213 @@
+.currencies-page .search {
+  flex: 1;
+}
+
+.currencies-page .search::before {
+  position: absolute;
+  content: "\f002";
+  font-family: var(--fa-style-family-classic);
+  /*"Font Awesome 6 Free"*/
+  font-weight: 900;
+  left: 19px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: var(--grey-color);
+}
+
+.currencies-page .search input {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-left: 9px;
+  padding-left: 31px;
+  width: 257px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.currencies-page .search input:focus {
+  width: 301px;
+  border-color: #ddd;
+}
+
+.currencies-page .search input::placeholder {
+  font-size: 14px;
+}
+
+.currencies-page .search input:focus::placeholder {
+  opacity: 0;
+  /* or color : transparent */
+}
+
+.currencies-page .operations {
+  display: flex;
+}
+
+.currencies-page .operations select {
+  border: 1px solid #ccc;
+  width: 133px;
+  height: 37px;
+  outline: none;
+  transition: 0.3s;
+  padding: 3px;
+}
+
+.currencies-page .operations select option {
+  font-size: 19px;
+}
+
+.currencies-table {
+  max-width: 1099px;
+}
+
+.currencies-table .responsive-table {
+  overflow-x: auto;
+  max-height: 999px;
+
+  /* Note : Content OverFlow Hidden*/
+}
+
+.currencies-table table {
+  min-width: 999px;
+  border-spacing: 0;
+}
+
+.currencies-table table td {
+  padding: 15px;
+  border-bottom: 1px solid #999;
+  border-left: 1px solid #999;
+  transition: 0.3s;
+}
+
+.currencies-table table tr td:last-child {
+  border-right: 1px solid #ccc;
+}
+
+.currencies-table thead td {
+  background-color: #ccc;
+  font-weight: bold;
+}
+
+.currencies-table tbody tr:hover td {
+  background-color: #faf7f7;
+  cursor: pointer;
+}
+
+.currencies-table tbody tr td:first-child {
+  text-align: center;
+  color: var(--blue-color);
+}
+
+.currencies-table tbody tr:hover td:first-child {
+  background-color: var(--blue-color);
+  color: white;
+}
+
+.currencies-table tbody tr td:nth-child(3) {
+  width: 313px;
+}
+
+.currency-card {
+  background-color: white;
+  position: fixed;
+  width: 50%;
+  max-width: 501px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 13;
+  left: -50%;
+  transition: 0.7s;
+  box-shadow: 0 0 20px rgb(0 0 0 / 20%);
+}
+
+.currency-card.show {
+  left: 50%;
+}
+
+.currency-card h2 {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.currency-card .close-btn {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  font-size: 19px;
+  background: var(--red-color);
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 39px;
+  height: 39px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.currency-card .close-btn:hover {
+  color: var(--red-color);
+  background-color: white;
+}
+
+.currency-card .container-form {
+  /* width: 100%; */
+  padding: 33px;
+}
+
+.currency-card .card {
+  padding: 10px 0 10px 13px;
+  margin-bottom: 17px;
+  font-size: 17px;
+  background-color: #efefef;
+  color: var(--grey-color);
+  border: 1px solid transparent;
+  transition: 0.5s ease;
+}
+
+.currency-card .card div {
+  display: inline-block;
+  color: var(--blue-color);
+}
+
+@media (max-width: 767px) {
+  .currencies-table {
+    margin: 10px;
+  }
+
+  .currencies-page .operations select option {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 651px) {
+  .currencies-page .operations {
+    flex-direction: column;
+    gap: 11px;
+  }
+
+  .currencies-page .operations select {
+    width: 201px;
+  }
+
+  .currencies-page .operations select option {
+    font-size: 13px;
+  }
+
+  .currencies-page .search::before {
+    left: 11px;
+  }
+
+  .currencies-page .search input {
+    margin-left: 0;
+    width: 199px;  }
+
+  .currencies-page .search input:focus {
+    width: 199px;  }
+
+  .currency-card {
+    width: 91%;
+  }
+}

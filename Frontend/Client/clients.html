@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clients</title>
+
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link rel="stylesheet" href="../css/framework.css" />
+    <link rel="stylesheet" href="../css/normalize.css" />
+
+    <link rel="stylesheet" href="../css/master.css" />
+    <link rel="stylesheet" href="Client.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&#038;display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="overlay"></div>
+
+    <div class="page d-flex">
+      <div class="sidebar bg-white p-relative pl-5">
+        <h3 class="p-relative txt-c mt-10">Bank</h3>
+        <ul>
+          <li>
+            <a
+              class="d-flex align-center fs-14 c-black rad-6 p-10"
+              href="../Dashboard/dashboard.html"
+            >
+              <i class="fa-regular fa-chart-bar fa-fw"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+
+          <li>
+            <a
+              class="active d-flex align-center fs-14 c-black rad-6 p-10"
+              href=""
+            >
+              <i class="fa-solid fa-gear fa-fw"></i>
+              <span>Clients</span>
+            </a>
+          </li>
+
+          <li class="dropMenu">
+            <div class="d-flex align-center fs-14 c-black rad-6 p-10">
+              <i class="fa-solid fa-gear fa-fw"></i>
+              <span>Transactions</span>
+            </div>
+            <ul class="p-10 pb-0 pt-0">
+              <li>
+                <a
+                  class="d-flex align-center fs-14 c-black rad-6 p-10"
+                  href="../Transactions/Deposit/Deposit.html"
+                >
+                  <i class="fa-solid fa-gear fa-fw"></i>
+                  <span>Deposit</span>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  class="d-flex align-center fs-14 c-black rad-6 p-10"
+                  href="../Transactions/Withdraw/Withdraw.html"
+                >
+                  <i class="fa-solid fa-gear fa-fw"></i>
+                  <span>Withdraw</span>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  class="d-flex align-center fs-14 c-black rad-6 p-10"
+                  href="../Transactions/Transfer/Transfer.html"
+                >
+                  <i class="fa-solid fa-gear fa-fw"></i>
+                  <span>Transfer</span>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  class="d-flex align-center fs-14 c-black rad-6 p-10"
+                  href="../Transactions/TransferHistory/TransferHistory.html"
+                >
+                  <i class="fa-solid fa-gear fa-fw"></i>
+                  <span>Transfer History</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="dropMenu">
+            <div class="d-flex align-center fs-14 c-black rad-6 p-10">
+              <i class="fa-solid fa-gear fa-fw"></i>
+              <span>Currencies</span>
+            </div>
+            <ul class="p-10 pb-0 pt-0">
+              <li>
+                <a
+                  class="d-flex align-center fs-14 c-black rad-6 p-10"
+                  href="../Currencies/Management/Management.html"
+                >
+                  <i class="fa-solid fa-gear fa-fw"></i>
+                  <span>Mangemnet</span>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  class="d-flex align-center fs-14 c-black rad-6 p-10"
+                  href="../Currencies/Exchange/Exchange.html"
+                >
+                  <i class="fa-solid fa-gear fa-fw"></i>
+                  <span>Exchange</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="content w-full">
+        <div class="head bg-white p-15 between-flex">
+          <div class="search p-relative">
+            <input class="p-10" type="text" placeholder="Type A Keyword" />
+          </div>
+          <div class="icons d-flex align-center">
+            <span class="notification p-relative">
+              <i class="fa-regular fa-bell fa-lg"></i>
+            </span>
+            <img src="../imgs/avatar.png" alt="" />
+          </div>
+        </div>
+
+        <h1 class="p-relative">Clients</h1>
+
+        <div class="clients-page p-relative">
+          <div class="operations m-20">
+            <select class="form-select form-select-lg mb-3 c-grey">
+              Select
+              <option value="Client Id">Client Id</option>
+              <option value="First Name">FirstName</option>
+              <option value="Last Name">LastName</option>
+            </select>
+
+            <div class="search p-relative">
+              <input
+                class="p-10"
+                type="text"
+                placeholder="Search By Client Id"
+              />
+            </div>
+
+            <button class="add-client-btn">Add Client</button>
+          </div>
+
+          <div class="clients-table p-10 bg-white rad-10 m-20">
+            <div class="responsive-table">
+              <table class="fs-15 w-full">
+                <thead>
+                  <tr>
+                    <td>Edit / Delete</td>
+                    <td>Client Id</td>
+                    <td>Pin Code</td>
+                    <td>First Name</td>
+                    <td>Last Name</td>
+                    <td>Balance</td>
+                    <td>Email</td>
+                    <td>Phone</td>
+                    <td>Birth Date</td>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="client-card">
+      <h2 class="title">Update Client</h2>
+      <div class="container-form">
+        <form action="clients.html">
+          <div class="card">
+            <input
+              class="firstname"
+              type="text"
+              maxlength="19"
+              placeholder="First Name"
+              text="Please enter Valid Name"
+              required
+            />
+          </div>
+          <div class="card">
+            <input
+              class="lastname"
+              type="text"
+              maxlength="19"
+              placeholder="Last Name"
+              text="Please enter your Valid Name"
+              required
+            />
+          </div>
+          <div class="card">
+            <input
+              class="email"
+              type="email"
+              maxlength="25"
+              placeholder="Email"
+              text="Please enter your email"
+              required
+            />
+          </div>
+          <div class="card">
+            <input
+              class="phone"
+              type="number"
+              placeholder="Phone"
+              text="Please enter your Phone"
+              required
+            />
+          </div>
+          <div class="card">
+            <input
+              class="date"
+              type="date"
+              text="Please enter your Date"
+              min="1901-01-10"
+              required
+            />
+          </div>
+          <div class="buttons">
+            <input type="submit" value="Cancel" class="cancelbtn" />
+            <input type="submit" value="Save" class="savebtn" />
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="client-info">
+      <h2>Client Info</h2>
+      <div class="close-btn">X</div>
+      <div class="content">
+        <div class="card">
+          Client Id :
+          <div class="client-id"></div>
+        </div>
+        <div class="card">
+          Pin Code :
+          <div class="pincode"></div>
+        </div>
+        <div class="card">
+          First Name :
+          <div class="firstname"></div>
+        </div>
+        <div class="card">
+          Last Name :
+          <div class="lastname"></div>
+        </div>
+        <div class="card">
+          Email :
+          <div class="email"></div>
+        </div>
+        <div class="card">
+          Phone :
+          <div class="phone"></div>
+        </div>
+        <div class="card">
+          Date Of Birth :
+          <div class="date-of-birth">lo</div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../Js/main.js"></script>
+    <script src="clients.js"></script>
+  </body>
+</html>
+
