@@ -14,7 +14,7 @@ async function FetchTotalClients() {
   let data;
 
   try {
-    data = await fetch("http://bsp.runasp.net/api/Clients/GetTotalClients");
+    data = await fetch("https://bsp.runasp.net/api/Clients/GetTotalClients");
   } catch (error) {
     return;
   }
@@ -26,7 +26,7 @@ async function FetchTotalClients() {
 
 async function FetchTotalTransfers() {
   let data = await fetch(
-    "http://bsp.runasp.net/api/Transfers/GetTotalTransfers"
+    "https://bsp.runasp.net/api/Transfers/GetTotalTransfers"
   );
   let total = (await data.json()).total;
 
@@ -35,7 +35,7 @@ async function FetchTotalTransfers() {
 
 async function FetchTotalTotalCurrenciess() {
   let data = await fetch(
-    "http://bsp.runasp.net/api/Currencies/GetCurrencies"
+    "https://bsp.runasp.net/api/Currencies/GetCurrencies"
   );
   let total = (await data.json()).total;
 
