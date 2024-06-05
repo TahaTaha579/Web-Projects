@@ -20,7 +20,7 @@ async function FetchAllClients() {
   let data;
 
   try {
-    data = await fetch("https://localhost:7203/api/Clients/GetClients");
+    data = await fetch("https://bsp.runasp.net/api/Clients/GetClients");
   } catch (error) {
     return;
   } finally {
@@ -131,7 +131,7 @@ WithdrawBtn.addEventListener("click", async (_) => {
 
 async function withdraw(clientId, amount) {
   let data = await fetch(
-    `https://localhost:7203/api/Clients/Withdraw/${clientId}`,
+    `https://bsp.runasp.net/api/Clients/Withdraw/${clientId}`,
     {
       method: "post",
       headers: {
