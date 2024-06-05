@@ -25,7 +25,7 @@ async function FetchAllTransfers() {
 
   try {
     data = await fetch(
-      "https://localhost:7203/api/Transfers/GetTransfersHistory"
+      "https://bsp.runasp.net/api/Transfers/GetTransfersHistory"
     );
   } catch (error) {
     return;
