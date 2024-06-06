@@ -5,14 +5,14 @@ let TotalCurrencies = document.querySelector(".TotalCurrencies");
 LoadData();
 
 async function LoadData() {
-  let a = FetchTotalClients();
-  let b = FetchTotalTransfers();
-  let c = FetchTotalTotalCurrenciess();
 
-  await a;
-  await b;
-  await c;
+  await Promise.all([
+    FetchTotalClients(),
+    FetchTotalTransfers(),
+    FetchTotalTotalCurrencies(),
+  ]);
 }
+
 
 async function FetchTotalClients() {
   let data;
@@ -37,7 +37,7 @@ async function FetchTotalTransfers() {
   TotalTransfers.textContent = total;
 }
 
-async function FetchTotalTotalCurrenciess() {
+async function FetchTotalTotalCurrencies() {
     fetch("https://bsp.runasp.net/api/Currencies/GetTotalCurrencies")
     .then((res) => {
       return res.json();
