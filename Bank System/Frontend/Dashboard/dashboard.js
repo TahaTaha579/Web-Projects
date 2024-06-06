@@ -34,10 +34,11 @@ async function FetchTotalTransfers() {
 }
 
 async function FetchTotalTotalCurrenciess() {
-  let data = await fetch(
-    "https://bsp.runasp.net/api/Currencies/GetCurrencies"
-  );
-  let total = (await data.json()).total;
-
-  TotalCurrencies.textContent = total;
+    fetch("https://bsp.runasp.net/api/Currencies/GetTotalCurrencies")
+    .then((res) => {
+      return res.json();
+    })
+    .then((res) => {
+      TotalCurrencies.textContent = res.total;
+    });
 }
