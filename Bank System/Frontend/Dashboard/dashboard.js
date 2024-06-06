@@ -4,10 +4,14 @@ let TotalCurrencies = document.querySelector(".TotalCurrencies");
 
 LoadData();
 
-function LoadData() {
-  FetchTotalClients();
-  FetchTotalTransfers();
-  FetchTotalTotalCurrenciess();
+async function LoadData() {
+  let a = FetchTotalClients();
+  let b = FetchTotalTransfers();
+  let c = FetchTotalTotalCurrenciess();
+
+  await a;
+  await b;
+  await c;
 }
 
 async function FetchTotalClients() {
