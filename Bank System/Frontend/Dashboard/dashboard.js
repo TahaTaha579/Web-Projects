@@ -38,7 +38,7 @@ async function FetchTotalTransfers() {
 }
 
 async function FetchTotalTotalCurrencies() {
-    fetch("https://bsp.runasp.net/api/Currencies/GetTotalCurrencies")
+    fetch("http://bsp.runasp.net/api/Currencies/GetTotalCurrencies")
     .then((res) => {
       return res.json();
     })
